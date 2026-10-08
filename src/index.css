@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #050914;
+    --navy-surface: #0a1124;
+    --navy-card: #0c1630;
+    --electric-blue: #0099ff;
+    --electric-cyan: #00d2ff;
+  }
+
+  body {
+    background-color: #050914;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Electric glow effects */
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(0, 153, 255, 0.4), 0 0 15px -2px rgba(0, 210, 255, 0.25);
+}
+
+.glow-blue-lg {
+  box-shadow: 0 0 60px -10px rgba(0, 153, 255, 0.5), 0 0 25px -4px rgba(0, 210, 255, 0.35);
+}
+
+.glow-blue-sm {
+  box-shadow: 0 0 16px -2px rgba(0, 153, 255, 0.35);
+}
+
+.glow-border {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: inset 0 0 20px -5px rgba(56, 189, 248, 0.15);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(11, 19, 43, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 27, 60, 0.8);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 35px -10px rgba(0, 153, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Radial ambient lighting */
+.ambient-glow-top {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.18) 0%, rgba(2, 132, 199, 0.08) 45%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-center {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle at center, rgba(0, 153, 255, 0.12) 0%, rgba(14, 165, 233, 0.04) 50%, transparent 75%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated pulse */
+@keyframes softPulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 4s ease-in-out infinite;
+}

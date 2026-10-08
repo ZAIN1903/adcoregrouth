@@ -1,0 +1,6 @@
+{
+  "name": "Telegram Channel Landing Page",
+  "description": "Premium, modern, high-converting landing page for Telegram channels featuring real-time insights, community stats, and electric blue styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
